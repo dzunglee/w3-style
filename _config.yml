@@ -28,3 +28,6 @@ collections:
   staff_members:
     people: true
     permalink: /:name
+
+sass:
+  sass_dir: _sass
