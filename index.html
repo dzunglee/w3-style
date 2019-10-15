@@ -21,6 +21,12 @@ layout: default
   <h2>{{ staff_member.name }} - {{ staff_member.position }}</h2>
   <p>{{ staff_member.content | markdownify }}</p>
   {% endfor %}
+  <div class="input-group border-under mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1"><i class="icon-lock"></i></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

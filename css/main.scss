@@ -50,6 +50,9 @@ $on-laptop:        800px;
         "base",
         "layout",
         "syntax-highlighting",
-        "w3_fonts"
+        "w3-fonts"
 ;
 
+*{
+  font-family: SFUIText-Medium;
+}
