@@ -11,8 +11,19 @@ permalink: /login/
                     <img src="/jekyll/images/Logo_Full_Slogan.svg" alt="" class="img-content-left">
                 </div>
                 <div class="form-content-left">
-                    <form action="#"><input type="text" class="form-control" id="email" placeholder="Enter username">
-                        <input type="password" class="form-control" id="email" placeholder="Enter password">
+                    <form action="#">
+                        <div class="input-group border-under mb-3">
+                            <div class="input-group-prepend input-login"><i class="icon-user icon-input-login"></i>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Enter username" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group border-under mb-3">
+                                <div class="input-group-prepend input-login"><i class="icon-lock icon-input-login"></i>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Enter password" aria-label="Password"
+                                    aria-describedby="basic-addon1">
+                        </div>
                         <div class="form-group">
                             <div class="form-check form-check-keep">
                                 <label class="form-check-label label-check-keep" for="gridCheck">
@@ -23,7 +34,7 @@ permalink: /login/
                         </div>
                         <div class="form-group form-submit-login">
                             <a href="#" class="forget-password">Forget password?</a>
-                            <button type="submit" class="btn btn-primary btn-login">Sign in </button>
+                            <button type="submit" class="btn btn-primary btn-login"><span style="font-size: 20px;">Sign in</span> <i class="icon-arrow-right icon-login-row" style="opacity: 1;"></i></button>
                         </div>
                     </form>
                 </div>
