@@ -1,5 +1,5 @@
 ---
-layout: guest
+layout: auth
 title: Login
 permalink: /login/
 ---
@@ -13,25 +13,27 @@ permalink: /login/
                     </div>
                 </div>
                 <form action="#" class="form-content-bd">
-                    <div class="input-group border-under">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="user-name"><i class="icon-user"></i></span>
+                    <div class="middle">
+                        <div class="input-group border-under">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="user-name"><i class="icon-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Enter username" aria-label="Username" aria-describedby="user-name">
                         </div>
-                        <input type="text" class="form-control" placeholder="Enter username" aria-label="Username" aria-describedby="user-name">
-                    </div>
-                    <div class="input-group border-under">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="password"><i class="icon-lock"></i></span>
+                        <div class="input-group border-under">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="password"><i class="icon-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Enter password" aria-label="Username" aria-describedby="password">
                         </div>
-                        <input type="password" class="form-control" placeholder="Enter password" aria-label="Username" aria-describedby="password">
-                    </div>
-                    <div class="custom-control custom-checkbox large-checkbox right-checkbox mb-5" id="checkbox-login">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Keep me signed in</label>
+                        <div class="custom-control custom-checkbox large-checkbox right-checkbox mb-5" id="checkbox-login">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Keep me signed in</label>
+                        </div>
                     </div>
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column justify-content-center">
-                            <a href="#" class="fs-regular-italic pl-3">Forget password?</a>
+                            <a href="{{ "/forget-pass" | prepend:site.baseurl }}">Forget password?</a>
                         </div>
                         <div class="d-flex justify-content-center">
                             <button type="button" class="btn btn-primary btn-blue btn-xlg radius-50">Sign in <i class="icon-arrow-right"></i></button>
