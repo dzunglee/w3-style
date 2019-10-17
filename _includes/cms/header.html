@@ -1,2 +1,38 @@
 <header>
+    <div class="wrap-header">
+        <div class="container-fluid d-flex px-0">
+            <div class="logo text-center">
+                <a href="{{ "/dashboard" | prepend:site.baseurl }}">
+                    <div class="d-inline-block" id="logo-svg" data-path="{{"/images/logo.svg" | prepend: site.baseurl}}"></div>
+                </a>
+            </div>
+            <nav class="flex-fill px-3">
+                <div class="d-flex w-100 navbar">
+                    <ul class="breadcrumb mr-auto mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <span>Example</span>
+                        </li>
+                    </ul>
+                    <ul class="right-menu d-flex mb-0">
+                        <li>
+                            <i class="icon-search"></i>
+                        </li>
+                        <li>
+                            <i class="icon-message-circle"></i>
+                        </li>
+                        <li>
+                            <i class="icon-bell"></i>
+                        </li>
+                        <li>
+                            <i class="icon-flag"></i>
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="scroll-hide">Overview</h1>
+            </nav>
+        </div>
+    </div>
 </header>

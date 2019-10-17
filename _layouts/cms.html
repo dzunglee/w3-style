@@ -3,10 +3,13 @@
 
   {% include cms/head.html %}
 
-  <body>
+  <body class="w3">
 
     {% include cms/header.html %}
-
+    <div class="d-flex content">
+      {% include cms/main-sidebar.html %}
+      {% include cms/content-wrapper.html %}
+    </div>
     {{ content }}
 
     {% include cms/footer.html %}
