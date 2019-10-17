@@ -1,0 +1,54 @@
+---
+layout: auth
+title: Login
+permalink: /login/
+---
+<div class="container-fluid auth login">
+    <div class="row h-100">
+        <div class="col-md-5 d-flex flex-column align-items-center left">
+            <div class="col px-0 d-flex flex-column justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="logo">
+                        <img alt="Logo" class="img-content-left" src="{{ "/images/Logo_Full_Slogan.svg" | prepend:site.baseurl }}">
+                    </div>
+                </div>
+                <form action="#" class="form-content-bd">
+                    <div class="middle">
+                        <div class="input-group border-under">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="user-name"><i class="icon-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Enter username" aria-label="Username" aria-describedby="user-name">
+                        </div>
+                        <div class="input-group border-under">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="password"><i class="icon-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Enter password" aria-label="Username" aria-describedby="password">
+                        </div>
+                        <div class="custom-control custom-checkbox large-checkbox right-checkbox mb-5" id="checkbox-login">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Keep me signed in</label>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column justify-content-center">
+                            <a href="{{ "/forget-pass" | prepend:site.baseurl }}">Forget password?</a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary btn-blue btn-xlg radius-50">Sign in <i class="icon-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-7 d-flex flex-column right pl-5">
+            <div class="pl-5">
+                <div class="col px-0">
+                    <h2 class="title">welcome back!</h2><br>
+                    <p class="description">Sign in by entering the information to continue to W3CMS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
