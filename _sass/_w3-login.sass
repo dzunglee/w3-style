@@ -20,22 +20,16 @@
   font-family: "SFUIText-Regular", sans-serif
   width: 70%
   margin-top: 1rem
-  visibility: hidden
 .welcome-hidden
-  visibility: hidden
   text-transform: uppercase
   margin: 3rem 1.9rem 0rem 1rem
   text-align: center
   font-size: 145%
 .middle-forget
   @extend .middle
-@include media-breakpoint-down(md)
-    .text-forget
-      visibility: visible
+@include media-breakpoint-down(xs)
     .custom-control-label
       font-size: 14px
-    .welcome-hidden
-      visibility: visible
     .btn-xlg
       min-width: 100%
       justify-content: center
