@@ -17,6 +17,8 @@
 .welcome-hidden
   visibility: hidden
 @include media-breakpoint-down(sm)
+    .custom-control-label
+      font-size: 14px
     .welcome-hidden
       visibility: visible
     .btn-xlg
@@ -24,6 +26,7 @@
       justify-content: center
     .large-checkbox.right-checkbox
       padding-right: 3.2rem
+      margin-top: 12%
     .right-content
       .col
         visibility: hidden
@@ -41,6 +44,9 @@
           margin-bottom: 0rem
           .input-group
             margin-bottom: 1rem
+            .input-group-text
+              i
+                font-size: 1.3rem
         .content-center-vip
           width: 90%
           padding-bottom: 50%
@@ -64,10 +70,25 @@
     .border-under
       width: 95%
     .forget-pass
+      font-size: px2rem(14)
       font-style: italic
       text-align: center
       padding-top: 1rem
     .form-submit-login
       flex-direction: column-reverse !important
       a
-        width: 100%
+        width: 90%
+      .submit-login
+        .btn-xlg
+          margin-top: -7%
+          height: 45px
+          padding: 0
+          font-size: px2rem(16)
+    .right-checkbox
+      line-height: 1rem
+      .custom-control-label
+        &::after,&::before
+          width: 3px
+          width: 18px
+          height: 18px
+          
