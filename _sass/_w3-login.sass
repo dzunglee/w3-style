@@ -16,7 +16,7 @@
       max-width: 100%
 .welcome-hidden
   visibility: hidden
-@include media-breakpoint-down(sm)
+@include media-breakpoint-down(xs)
     .custom-control-label
       font-size: 14px
     .welcome-hidden
@@ -39,11 +39,14 @@
         background-color: hsla(0,0%,100%,0.70)
         background-size: 127% 171%
         background-position: -125% -8%
+        background-attachment: fixed
         z-index: 10
         .middle
           margin-bottom: 0rem
           .input-group
             margin-bottom: 1rem
+            input
+              background-color: rgba(255,255,255,0)
             .input-group-text
               i
                 font-size: 1.3rem
@@ -74,6 +77,8 @@
       font-style: italic
       text-align: center
       padding-top: 1rem
+      a
+        margin-left: 5%
     .form-submit-login
       flex-direction: column-reverse !important
       a
