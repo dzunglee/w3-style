@@ -14,9 +14,24 @@
     .col
       width: 570px
       max-width: 100%
+.text-forget
+  text-align: left
+  font-size: px2rem(14)
+  font-family: "SFUIText-Regular", sans-serif
+  width: 70%
+  margin-top: 1rem
+  visibility: hidden
 .welcome-hidden
   visibility: hidden
-@include media-breakpoint-down(xs)
+  text-transform: uppercase
+  margin: 3rem 1.9rem 0rem 1rem
+  text-align: center
+  font-size: 145%
+.middle-forget
+  @extend .middle
+@include media-breakpoint-down(md)
+    .text-forget
+      visibility: visible
     .custom-control-label
       font-size: 14px
     .welcome-hidden
@@ -50,6 +65,8 @@
             .input-group-text
               i
                 font-size: 1.3rem
+        .middle-forget
+          min-height: 5rem
         .content-center-vip
           width: 90%
           .logo
