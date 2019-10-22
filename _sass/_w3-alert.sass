@@ -1,8 +1,10 @@
 $radius-alert: px2rem(5)
+$size: px2rem(16)
 @mixin alertdefault($background, $color, $colora)
     background-color: $background
     color: $color
     border-radius: $radius-alert
+    font-size: $size
     @extend .box-shadow-alert
     .alert-link
         color: $colora
@@ -11,11 +13,13 @@ $radius-alert: px2rem(5)
     background-color: $background
     color: $color
     border-radius: $radius-alert
+    font-size: $size
     .alert-link
         color: $colora
         font-weight: bold
 @mixin alertborder($color)
     border-color: $color
+    font-size: $size
     color: $color
     border-radius: px2rem(100)
     .alert-link
