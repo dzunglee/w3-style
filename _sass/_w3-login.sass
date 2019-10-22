@@ -14,3 +14,95 @@
     .col
       width: 570px
       max-width: 100%
+.text-forget
+  text-align: left
+  font-size: px2rem(14)
+  font-family: "SFUIText-Regular", sans-serif
+  width: 70%
+  margin-top: 1rem
+.welcome-hidden
+  text-transform: uppercase
+  margin: 3rem 1.9rem 0rem 1rem
+  text-align: center
+  font-size: 145%
+.middle-forget
+  @extend .middle
+@include media-breakpoint-down(xs)
+    .custom-control-label
+      font-size: 14px
+    .btn-xlg
+      min-width: 100%
+      justify-content: center
+    .large-checkbox.right-checkbox
+      padding-right: 3.2rem
+      margin-top: 12%
+    .right-content
+      .col
+        visibility: hidden
+    .login
+      position: absolute
+      .left
+        background-image: url("../images/BG1.svg")
+        background-repeat: no-repeat
+        background-blend-mode: overlay
+        background-color: hsla(0,0%,100%,0.70)
+        background-size: 127% 171%
+        background-position: -125% -8%
+        background-attachment: fixed
+        z-index: 10
+        .middle
+          margin-bottom: 0rem
+          .input-group
+            margin-bottom: 1rem
+            input
+              background-color: rgba(255,255,255,0)
+            .input-group-text
+              i
+                font-size: 1.3rem
+        .middle-forget
+          min-height: 5rem
+        .content-center-vip
+          width: 90%
+          .logo
+            margin-bottom: 2rem
+            margin-left: 8%
+      .right
+        background-origin: content-box
+        background-color: #FFFFFF
+        background-size: 210% 195%
+        position: fixed
+        background-image: none
+        bottom: 0
+        opacity: 0.5
+    .form-content-bd
+      .input-group
+        input
+          font-size: 90%
+          height: px2rem(26.36)
+    .border-under
+      width: 95%
+    .forget-pass
+      font-size: px2rem(14)
+      font-style: italic
+      text-align: center
+      padding-top: 1rem
+      a
+        margin-left: 5%
+    .form-submit-login
+      flex-direction: column-reverse !important
+      a
+        width: 90%
+      .submit-login
+        .btn-xlg
+          margin-top: -7%
+          height: 45px
+          padding: 0
+          font-size: px2rem(16)
+    .right-checkbox
+      line-height: 1rem
+      .custom-control-label
+        &::after,&::before
+          width: 3px
+          width: 18px
+          height: 18px
+          
