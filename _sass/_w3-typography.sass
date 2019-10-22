@@ -12,11 +12,6 @@
     font-family: $fonts
     font-size: $size
     color: $color
-@mixin typographyblockquotes($align)
-    text-align: $align
-    .blockquote-footer
-        @include typographystyle( SFUIText-RegularItalic ,px2rem(13) ,#9f9f9f )
-        
     
 h1
     @include typographyheading(bold,40pt,8px)
@@ -52,18 +47,14 @@ h6
     @include typographyelement(SFUIText-Semibold)
 .lead
     @include typographystyle(SFUIText-Light ,px2rem(20),#9f9f9f )
-    
 abbr
     @include typographystyle(SFUIText-Regular ,px2rem(16),$blue )
-.blockquote
-    @include typographyblockquotes(left)
-.blockquote-center
-    @include typographyblockquotes(center)
-.blockquote-right
-    @include typographyblockquotes(right)
 .list
     @include typographystyle(SFUIText-Regular, px2rem(16),rgb(94,94,94))
     margin: 8px
+.blockquote-footer
+    font-style: italic
+    font-size: 13px
 .list-inline
     @extend .list
     .list-inline-item
