@@ -1,0 +1,69 @@
+@mixin typographyheading($weight,$size,$margin)
+    font-weight: $weight
+    font-size: $size
+    margin-bottom: $margin
+@mixin typographydisplay($size,$margin)
+    font-size: $size
+    margin-bottom: $margin
+@mixin typographyelement($fonts)
+    font-size: 16pt
+    font-family: $fonts
+@mixin typographystyle($fonts,$size,$color)
+    font-family: $fonts
+    font-size: $size
+    color: $color
+    
+h1
+    @include typographyheading(bold,40pt,8px)
+h2
+    @include typographyheading(bold,32pt,8px )
+h3
+    @include typographyheading(600,28pt,8px )
+h4
+    @include typographyheading(600 ,24pt,8px )
+h5
+    @include typographyheading(500,20pt,8px)
+h6
+    @include typographyheading(500,16pt,8px)
+.display-1
+    @include typographydisplay(48pt,16px)
+.display-2
+    @include typographydisplay(40pt,16px)
+.display-3
+    @include typographydisplay(32pt,16px)
+.display-4
+    @include typographydisplay(28pt,16px)
+.text-light-element
+    @include typographyelement(SFUIText-Light)
+.text-light-italic
+    @include typographyelement(SFUIText-LightItalic)
+.text-regular
+    @include typographyelement(SFUIText-Regular)
+.text-italic
+    @include typographyelement(SFUIText-RegularItalic)
+.text-medium
+    @include typographyelement(SFUIText-Medium)
+.text-semibold
+    @include typographyelement(SFUIText-Semibold)
+.lead
+    @include typographystyle(SFUIText-Light ,px2rem(20),#9f9f9f )
+abbr
+    @include typographystyle(SFUIText-Regular ,px2rem(16),$blue )
+.list
+    @include typographystyle(SFUIText-Regular, px2rem(16),rgb(94,94,94))
+    margin: 8px
+.blockquote-footer
+    font-style: italic
+    font-size: 13px
+.list-inline
+    @extend .list
+    .list-inline-item
+        &::before
+            content: "º"
+            font-size: 15px
+            vertical-align: middle
+            padding-right: px2rem(10)
+        &:first-child
+            &::before
+                content: ""
+            
