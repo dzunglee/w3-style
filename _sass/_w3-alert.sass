@@ -1,6 +1,6 @@
 $radius-alert: px2rem(5)
 $size: px2rem(16)
-@mixin alertdefault($background, $color, $colora)
+@mixin alertDefault($background, $color, $colora)
     background-color: $background
     color: $color
     border-radius: $radius-alert
@@ -9,7 +9,7 @@ $size: px2rem(16)
     .alert-link
         color: $colora
         font-style: italic
-@mixin alertlight($background, $color, $colora)
+@mixin alertLight($background, $color, $colora)
     background-color: $background
     color: $color
     border-radius: $radius-alert
@@ -17,7 +17,7 @@ $size: px2rem(16)
     .alert-link
         color: $colora
         font-weight: bold
-@mixin alertborder($color)
+@mixin alertBorder($color)
     border-color: $color
     font-size: $size
     color: $color
@@ -29,55 +29,55 @@ $size: px2rem(16)
         font-size: px2rem(20)
         padding-right: px2rem(10)
 .alert-primary
-    @include alertdefault($blue, $white, $gray)
+    @include alertDefault($blue, $white, $gray)
 .alert-secondary
-    @include alertdefault($secondary,$white, $gray-blur)
+    @include alertDefault($secondary,$white, $gray-blur)
 .alert-success
-    @include alertdefault($green,$white, $gray)
+    @include alertDefault($green,$white, $gray)
 .alert-danger
-    @include alertdefault($orange,$white, $gray)
+    @include alertDefault($orange,$white, $gray)
 .alert-warning
-    @include alertdefault($yellow, $white, $gray)
+    @include alertDefault($yellow, $white, $gray)
 .alert-info
-    @include alertdefault($dark-green, $white, $secondary)
+    @include alertDefault($dark-green, $white, $secondary)
 .alert-light
-    @include alertdefault($white, $black-75, $blue)
+    @include alertDefault($white, $black-75, $blue)
 .alert-dark
-    @include alertdefault($gray, $white, $blue)
+    @include alertDefault($gray, $white, $blue)
 .alert-primary-light
-    @include alertlight($blue-blur, $blue, $blue)
+    @include alertLight($blue-blur, $blue, $blue)
 .alert-secondary-light
-    @include alertlight($secondary-blur,$secondary, $secondary)
+    @include alertLight($secondary-blur,$secondary, $secondary)
 .alert-success-light
-    @include alertlight($green-blur,$green, $green)
+    @include alertLight($green-blur,$green, $green)
     .alert-heading,.mb-0
         color: $dark-green
 .alert-danger-light
-    @include alertlight($orange-blur,$orange, $orange)
+    @include alertLight($orange-blur,$orange, $orange)
 .alert-warning-light
-    @include alertlight($yellow-blur, $yellow, $yellow)
+    @include alertLight($yellow-blur, $yellow, $yellow)
 .alert-info-light
-    @include alertlight($dark-green-blur, $dark-green, $dark-green)
+    @include alertLight($dark-green-blur, $dark-green, $dark-green)
 .alert-light-light
-    @include alertlight($white, $black-75, $black-75)
+    @include alertLight($white, $black-75, $black-75)
 .alert-dark-light
-    @include alertlight($gray-blur, $gray, $gray)
+    @include alertLight($gray-blur, $gray, $gray)
 .alert-primary-border
-    @include alertborder($blue)
+    @include alertBorder($blue)
 .alert-secondary-border
-    @include alertborder($secondary)
+    @include alertBorder($secondary)
 .alert-success-border
-    @include alertborder($green)
+    @include alertBorder($green)
 .alert-danger-border
-    @include alertborder($orange)
+    @include alertBorder($orange)
 .alert-warning-border
-    @include alertborder($yellow)
+    @include alertBorder($yellow)
 .alert-info-border
-    @include alertborder($dark-green)
+    @include alertBorder($dark-green)
 .alert-dark-border
-    @include alertborder($gray)
+    @include alertBorder($gray)
 .alert-success-addition
-    @include alertborder($green)
+    @include alertBorder($green)
     border-radius: $radius-alert
 .alert-with-icon
     display: flex
