@@ -1,12 +1,10 @@
 @import "mixin/w3-badge"
-$padding: px2rem(7)
 $badgeupdate: "primary" $w3-primary $white $w3-primary-hover true,"secondary" $w3-secondary $white $w3-secondary-hover true,"success" $w3-success $white $w3-success-hover true, "danger" $w3-danger $white $w3-danger-hover true, "warning" $w3-warning $white $w3-warning-hover true, "info" $w3-info $white $w3-info-hover true, "light" $w3-light $black $w3-light-hover true,"dark" $w3-dark $white $w3-dark-hover true
 $eachborder: "primary" $blue, "warning" $yellow, "danger" $orange, "info" $dark-green, "success" $green, "dark" $gray
 $eachbagenew: "primary" $blue-blur $blue true, "secondary" $secondary-blur $secondary true, "success" $green-blur $green true, "danger" $orange-blur $orange true, "warning" $yellow-blur $yellow true, "info" $dark-green-blur $dark-green true, "dark" $gray-blur $gray true
 @each $name, $background, $color, $hover, $border in $badgeupdate
     .badge-#{$name}
         @include badge($background, $color, $border)
-        padding: $padding
     a.badge-#{$name}
         &:hover
             color: $color
@@ -14,7 +12,6 @@ $eachbagenew: "primary" $blue-blur $blue true, "secondary" $secondary-blur $seco
 @each $name, $background, $color, $border in $eachbagenew
     .badge-#{$name}-light
         @include badge($background, $color, $border)
-        padding: $padding
     a.badge-#{$name}-light
         &:hover
             color: $color
@@ -23,5 +20,4 @@ $eachbagenew: "primary" $blue-blur $blue true, "secondary" $secondary-blur $seco
 @each $name, $border in $eachborder
     .badge-#{$name}-border
         @include badgeborder($border)
-        padding: $padding
      
