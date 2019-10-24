@@ -1,0 +1,11 @@
+@mixin badge($background,$color,$radius: false)
+ background-color: $background
+ color: $color
+ @if $radius
+   border-radius: px2rem(5)
+ @else
+   border-radius: px2rem(100)
+@mixin badgeborder($border)
+ border: 1px solid $border
+ border-radius: 100px
+ color: $border
