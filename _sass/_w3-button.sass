@@ -4,7 +4,7 @@
 $btn-bg       : ("primary": $w3-primary,                          "secondary": $w3-secondary,                             "success": $w3-success,                           "danger": $w3-danger,                           "warning": $w3-warning,                           "info": $w3-info,                       "light": $w3-light,                         "dark": $w3-dark)
 $btn-bg-hover : ("primary": $w3-primary-hover,                    "secondary": $w3-secondary-hover,                       "success": $w3-success-hover,                     "danger": $w3-danger-hover,                     "warning": $w3-warning-hover,                     "info": $w3-info-hover,                 "light": $w3-light-hover,                   "dark": $w3-dark-hover)
 $btn-bg-active: ("primary": $w3-primary-active,                   "secondary": $w3-secondary-active,                      "success": $w3-success-active,                    "danger": $w3-danger-active,                    "warning": $w3-warning-active,                    "info": $w3-info-active,                "light": $w3-light-active,                  "dark": $w3-dark-active)
-$btn-gradient : ("primary": ($w3-gradient-primary : $w3-primary), "secondary": ($w3-gradient-secondary : $w3-secondary),   "success": ($w3-gradient-success : $w3-success),  "danger": ($w3-gradient-danger : $w3-danger),   "warning": ($w3-gradient-warning : $w3-warning),  "info": ($w3-gradient-info : $w3-info))
+$btn-gradient : ("primary": ($w3-gradient-primary : $w3-primary), "secondary": ($w3-gradient-secondary : $w3-secondary),  "success": ($w3-gradient-success : $w3-success),  "danger": ($w3-gradient-danger : $w3-danger),   "warning": ($w3-gradient-warning : $w3-warning),  "info": ($w3-gradient-info : $w3-info))
 
 $radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5rem )
 .btn
@@ -16,18 +16,21 @@ $radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5r
 // Change buttons
 @each $name , $color in $btn-bg
   .btn-#{$name}
-    background-color : #{$color}
-    border-color     : #{$color}
-    color            : $white
+    background-color  : #{$color}
+    border-color      : #{$color}
+    color             : $white
+    --box-shadow-color: #{$color}
 
   .btn-outline-#{$name}
-    color            : #{$color}
-    border-color     : #{$color}
+    color             : #{$color}
+    border-color      : #{$color}
+    --box-shadow-color: #{$color}
 
   .btn-#{$name}.disabled, .btn-#{$name}:disabled
-    background-color : #{$color}
-    border-color     : #{$color}
-    opacity          : 0.7
+    background-color  : #{$color}
+    border-color      : #{$color}
+    opacity           : 0.7
+    --box-shadow-color: #{$color}
 
 @each $name , $color in $btn-bg-hover
   .btn-#{$name}:hover
@@ -71,6 +74,7 @@ $radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5r
       background: linear-gradient(90deg, #{$gradient} 0%, #{$color} 100%)
       color     : $white
       border    : none
+      --box-shadow-color: #{$color}
 
 @each $name , $colors in $btn-bg
   .btn-#{$name}.focus, .btn-#{$name}:focus
@@ -118,10 +122,8 @@ $radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5r
 
 // **
 // shadow
-
-@each $name , $color in $btn-bg
-  .#{$name}-shadow, .w3-#{$name}-shadow:focus
-    box-shadow: 0px 0px 20px -5px #{$color}
+.shadow, .shadow:focus
+    box-shadow: 0 0 0.9rem -0.25rem var(--box-shadow-color) !important
 
 // **
 // button icon
