@@ -1,27 +1,28 @@
 $radius-alert: px2rem(5)
 $size: px2rem(16)
-@mixin alertdefault($background, $color, $colora)
+@mixin alertDefault($background, $color, $colora, $light: false)
     background-color: $background
     color: $color
     border-radius: $radius-alert
     font-size: $size
-    @extend .box-shadow-alert
+    @if $light
+        box-shadow: none
+    @else 
+        @extend .box-shadow-alert
     .alert-link
         color: $colora
-        font-style: italic
-@mixin alertlight($background, $color, $colora)
-    background-color: $background
-    color: $color
-    border-radius: $radius-alert
-    font-size: $size
-    .alert-link
-        color: $colora
-        font-weight: bold
-@mixin alertborder($color)
+        @if $light
+            font-weight: bold
+        @else 
+            font-style: italic
+@mixin alertBorder($color,$radius:false)
     border-color: $color
     font-size: $size
     color: $color
-    border-radius: px2rem(100)
+    @if $radius
+        border-radius: px2rem(100)
+    @else 
+        border-radius: $radius-alert
     .alert-link
         color: $color
         font-weight: bold
@@ -29,56 +30,55 @@ $size: px2rem(16)
         font-size: px2rem(20)
         padding-right: px2rem(10)
 .alert-primary
-    @include alertdefault($blue, $white, $gray)
+    @include alertDefault($blue, $white, $gray,$light: false)
 .alert-secondary
-    @include alertdefault($secondary,$white, $gray-blur)
+    @include alertDefault($secondary,$white, $gray-blur,$light: false)
 .alert-success
-    @include alertdefault($green,$white, $gray)
+    @include alertDefault($green,$white, $gray,$light: false)
 .alert-danger
-    @include alertdefault($orange,$white, $gray)
+    @include alertDefault($orange,$white, $gray,$light: false)
 .alert-warning
-    @include alertdefault($yellow, $white, $gray)
+    @include alertDefault($yellow, $white, $gray,$light: false)
 .alert-info
-    @include alertdefault($dark-green, $white, $secondary)
+    @include alertDefault($dark-green, $white, $secondary,$light: false)
 .alert-light
-    @include alertdefault($white, $black-75, $blue)
+    @include alertDefault($white, $black-75, $blue,$light: false)
 .alert-dark
-    @include alertdefault($gray, $white, $blue)
+    @include alertDefault($gray, $white, $blue,$light: false)
 .alert-primary-light
-    @include alertlight($blue-blur, $blue, $blue)
+    @include alertDefault($blue-blur, $blue, $blue,$light: true)
 .alert-secondary-light
-    @include alertlight($secondary-blur,$secondary, $secondary)
+    @include alertDefault($secondary-blur,$secondary, $secondary,$light: true)
 .alert-success-light
-    @include alertlight($green-blur,$green, $green)
+    @include alertDefault($green-blur,$green, $green,$light: true)
     .alert-heading,.mb-0
         color: $dark-green
 .alert-danger-light
-    @include alertlight($orange-blur,$orange, $orange)
+    @include alertDefault($orange-blur,$orange, $orange,$light: true)
 .alert-warning-light
-    @include alertlight($yellow-blur, $yellow, $yellow)
+    @include alertDefault($yellow-blur, $yellow, $yellow,$light: true)
 .alert-info-light
-    @include alertlight($dark-green-blur, $dark-green, $dark-green)
+    @include alertDefault($dark-green-blur, $dark-green, $dark-green,$light: true)
 .alert-light-light
-    @include alertlight($white, $black-75, $black-75)
+    @include alertDefault($white, $black-75, $black-75,$light: true)
 .alert-dark-light
-    @include alertlight($gray-blur, $gray, $gray)
+    @include alertDefault($gray-blur, $gray, $gray,$light: true)
 .alert-primary-border
-    @include alertborder($blue)
+    @include alertBorder($blue,$radius: true)
 .alert-secondary-border
-    @include alertborder($secondary)
+    @include alertBorder($secondary,$radius: true)
 .alert-success-border
-    @include alertborder($green)
+    @include alertBorder($green, $radius: true)
 .alert-danger-border
-    @include alertborder($orange)
+    @include alertBorder($orange,$radius: true)
 .alert-warning-border
-    @include alertborder($yellow)
+    @include alertBorder($yellow,$radius: true)
 .alert-info-border
-    @include alertborder($dark-green)
+    @include alertBorder($dark-green,$radius: true)
 .alert-dark-border
-    @include alertborder($gray)
+    @include alertBorder($gray,$radius: true)
 .alert-success-addition
-    @include alertborder($green)
-    border-radius: $radius-alert
+    @include alertBorder($green,$radius:false)
 .alert-with-icon
     display: flex
     align-items: center
