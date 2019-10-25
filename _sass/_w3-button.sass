@@ -1,3 +1,145 @@
+// *****
+// W3suga buttons
+//
+$btn-bg       : ("primary": $w3-primary,                          "secondary": $w3-secondary,                             "success": $w3-success,                           "danger": $w3-danger,                           "warning": $w3-warning,                           "info": $w3-info,                       "light": $w3-light,                         "dark": $w3-dark)
+$btn-bg-hover : ("primary": $w3-primary-hover,                    "secondary": $w3-secondary-hover,                       "success": $w3-success-hover,                     "danger": $w3-danger-hover,                     "warning": $w3-warning-hover,                     "info": $w3-info-hover,                 "light": $w3-light-hover,                   "dark": $w3-dark-hover)
+$btn-bg-active: ("primary": $w3-primary-active,                   "secondary": $w3-secondary-active,                      "success": $w3-success-active,                    "danger": $w3-danger-active,                    "warning": $w3-warning-active,                    "info": $w3-info-active,                "light": $w3-light-active,                  "dark": $w3-dark-active)
+$btn-gradient : ("primary": ($w3-gradient-primary : $w3-primary), "secondary": ($w3-gradient-secondary : $w3-secondary),   "success": ($w3-gradient-success : $w3-success),  "danger": ($w3-gradient-danger : $w3-danger),   "warning": ($w3-gradient-warning : $w3-warning),  "info": ($w3-gradient-info : $w3-info))
+
+$radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5rem )
+.btn
+  font-size: 1rem
+  border-radius: 0.3125rem
+  padding: 0.4375rem 1rem
+
+// **
+// Change buttons
+@each $name , $color in $btn-bg
+  .btn-#{$name}
+    background-color : #{$color}
+    border-color     : #{$color}
+    color            : $white
+
+  .btn-outline-#{$name}
+    color            : #{$color}
+    border-color     : #{$color}
+
+  .btn-#{$name}.disabled, .btn-#{$name}:disabled
+    background-color : #{$color}
+    border-color     : #{$color}
+    opacity          : 0.7
+
+@each $name , $color in $btn-bg-hover
+  .btn-#{$name}:hover
+    background-color : #{$color}
+    border-color     : #{$color}
+    &:hover
+      box-shadow     : 0px 3px 6px 0px rgba(90, 90, 90, 0.26)
+
+  .btn-outline-#{$name}:hover
+    background-color : #{$color}
+    border-color     : #{$color}
+    &:hover
+      box-shadow     : 0px 3px 6px 0px rgba(90, 90, 90, 0.26)
+
+@each $name , $color in $btn-bg-active
+  .btn-#{$name}:not(:disabled):not(.disabled):focus
+    background-color : #{$color}
+    border-color     : #{$color}
+
+  .btn-#{$name}:not(:disabled):not(.disabled).active
+    background-color : #{$color}
+    border-color     : #{$color}
+
+  .btn-outline-#{$name}:not(:disabled):not(.disabled):focus
+    background-color : #{$color}
+    border-color     : #{$color}
+    color            : $white
+
+  .btn-#{$name}:not(:disabled):not(.disabled):active:focus
+    box-shadow       : inherit
+
+  .btn-#{$name}:not(:disabled):not(.disabled).active:focus
+    box-shadow       : 0px 3px 6px 0px rgba(90, 90, 90, 0.26)
+
+  .btn-outline-#{$name}:not(:disabled):not(.disabled):active:focus
+    box-shadow       : 0px 3px 6px 0px rgba(90, 90, 90, 0.26)
+
+@each $name , $colors in $btn-gradient
+  @each $gradient , $color in $colors
+    .gradient-#{$name}
+      background: linear-gradient(90deg, #{$gradient} 0%, #{$color} 100%)
+      color     : $white
+      border    : none
+
+@each $name , $colors in $btn-bg
+  .btn-#{$name}.focus, .btn-#{$name}:focus
+    box-shadow: none
+
+// fix color light
+.btn-light
+  color              : $black
+
+// fix color hover warning
+.btn-warning:hover
+  color              : $white
+
+// fix color hover warning
+.btn-outline-warning:hover
+  color              : $white
+
+// fix color focus warning
+.btn-warning:not(:disabled):not(.disabled):focus
+  color              : $white
+
+// fix color focus warning
+.btn-outline-warning:not(:disabled):not(.disabled):focus
+  color              : $white
+
+// fix color focus warning active
+.btn-warning:not(:disabled):not(.disabled).active
+  color              : $white
+
+// fix color focus light
+.btn-outline-light:not(:disabled):not(.disabled):focus
+  color              : $black
+
+// fix underline focus link active
+.btn-link:not(:disabled):not(.disabled).active
+  text-decoration    : underline
+
+// **
+// size
+.btn-lg
+  font-size: 1.25rem
+
+.btn-sm
+  font-size: 0.875rem
+
+// **
+// shadow
+
+@each $name , $color in $btn-bg
+  .#{$name}-shadow, .w3-#{$name}-shadow:focus
+    box-shadow: 0px 0px 20px -5px #{$color}
+
+// **
+// button icon
+
+.btn-icon
+  padding: 0.25rem .5rem .2rem
+  border-radius: 0.25rem
+
+// **
+// button radius
+@each $name , $value in $radius
+  .radius-#{$name}
+    border-radius: #{$value}
+
+/////////////////
+// custom login
+//
+
 .btn-blue
   background: rgb(17,204,243)
   background: linear-gradient(90deg, rgba(17,204,243,1) 0%, rgba(64,132,247,1) 100%)
