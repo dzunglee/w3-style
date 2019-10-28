@@ -66,3 +66,15 @@ $w3-gradient-success         : rgb(103,206,0  )
 $w3-gradient-danger          : rgb(251,128,81 )
 $w3-gradient-warning         : rgb(255,255,103)
 $w3-gradient-info            : rgb(127,227,235)
+
+// Name theme basic
+$theme-basic          : ('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link')
+
+$theme-color          : ("primary": $w3-primary,                          "secondary": $w3-secondary,                             "success": $w3-success,                           "danger": $w3-danger,                           "warning": $w3-warning,                           "info": $w3-info,                       "light": $w3-light,                         "dark": $w3-dark)
+$theme-color-hover    : ("primary": $w3-primary-hover,                    "secondary": $w3-secondary-hover,                       "success": $w3-success-hover,                     "danger": $w3-danger-hover,                     "warning": $w3-warning-hover,                     "info": $w3-info-hover,                 "light": $w3-light-hover,                   "dark": $w3-dark-hover)
+$theme-color-active   : ("primary": $w3-primary-active,                   "secondary": $w3-secondary-active,                      "success": $w3-success-active,                    "danger": $w3-danger-active,                    "warning": $w3-warning-active,                    "info": $w3-info-active,                "light": $w3-light-active,                  "dark": $w3-dark-active)
+$theme-color-gradient : ("primary": ($w3-gradient-primary : $w3-primary), "secondary": ($w3-gradient-secondary : $w3-secondary),  "success": ($w3-gradient-success : $w3-success),  "danger": ($w3-gradient-danger : $w3-danger),   "warning": ($w3-gradient-warning : $w3-warning),  "info": ($w3-gradient-info : $w3-info))
+
+@each $name, $color in $theme-color
+  .#{$name}
+    --color: #{$color}
