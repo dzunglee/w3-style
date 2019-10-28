@@ -19,18 +19,18 @@ $radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5r
     background-color  : #{$color}
     border-color      : #{$color}
     color             : $white
-    --box-shadow-color: #{$color}
+    --color: #{$color}
 
   .btn-outline-#{$name}
     color             : #{$color}
     border-color      : #{$color}
-    --box-shadow-color: #{$color}
+    --color: #{$color}
 
   .btn-#{$name}.disabled, .btn-#{$name}:disabled
     background-color  : #{$color}
     border-color      : #{$color}
     opacity           : 0.7
-    --box-shadow-color: #{$color}
+    --color: #{$color}
 
 @each $name , $color in $btn-bg-hover
   .btn-#{$name}:hover
@@ -74,7 +74,7 @@ $radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5r
       background: linear-gradient(90deg, #{$gradient} 0%, #{$color} 100%)
       color     : $white
       border    : none
-      --box-shadow-color: #{$color}
+      --color: #{$color}
 
 @each $name , $colors in $btn-bg
   .btn-#{$name}.focus, .btn-#{$name}:focus
@@ -123,7 +123,7 @@ $radius       : ( 0 : 0rem, 1 : 0.5rem, 2 : 1rem, 3 : 1.5rem, 4 : 2rem, 5 : 2.5r
 // **
 // shadow
 .shadow, .shadow:focus
-    box-shadow: 0 0 0.9rem -0.25rem var(--box-shadow-color) !important
+    box-shadow: 0 0 0.9rem -0.25rem var(--color) !important
 
 // **
 // button icon
