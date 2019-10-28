@@ -1,0 +1,267 @@
+---
+layout: component
+title: Button Group - Components
+permalink: /components/button_group/
+---
+<div class="container">
+    <div class="">
+        <h1>Button Group</h1>
+        <p>Use w3suga custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+    </div>
+    <div class="">
+        <h3>Default</h3>
+        <div class="col-12">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary active">Left</button>
+                <button type="button" class="btn btn-primary">Middle</button>
+                <button type="button" class="btn btn-primary">Right</button>
+            </div>
+        </div>
+        <div class="col-12">
+           <xmp>
+               <div class="btn-group" role="group" aria-label="Basic example">
+                   <button type="button" class="btn btn-primary active">Left</button>
+                   <button type="button" class="btn btn-primary">Middle</button>
+                   <button type="button" class="btn btn-primary">Right</button>
+               </div>
+           </xmp>
+        </div>
+    </div>
+    <div class="">
+        <h3>Button toolbar</h3>
+        <div class="col-12">
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-primary ">1</button>
+                    <button type="button" class="btn btn-primary">2</button>
+                    <button type="button" class="btn btn-primary">3</button>
+                    <button type="button" class="btn btn-primary">4</button>
+                </div>
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-primary">5</button>
+                    <button type="button" class="btn btn-primary">6</button>
+                    <button type="button" class="btn btn-primary">7</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                    <button type="button" class="btn btn-primary">8</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <xmp>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-primary">1</button>
+                        <button type="button" class="btn btn-primary">2</button>
+                        <button type="button" class="btn btn-primary">3</button>
+                        <button type="button" class="btn btn-primary">4</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <button type="button" class="btn btn-primary">5</button>
+                        <button type="button" class="btn btn-primary">6</button>
+                        <button type="button" class="btn btn-primary">7</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" class="btn btn-primary">8</button>
+                    </div>
+                </div>
+            </xmp>
+        </div>
+    </div>
+    <div class="">
+        <h3>Sizing</h3>
+        <div class="col-12 py-1">
+            <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary">Left</button>
+                <button type="button" class="btn btn-primary">Middle</button>
+                <button type="button" class="btn btn-primary">Right</button>
+            </div>
+        </div>
+        <div class="col-12 py-1">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary">Left</button>
+                <button type="button" class="btn btn-primary">Middle</button>
+                <button type="button" class="btn btn-primary">Right</button>
+            </div>
+        </div>
+        <div class="col-12 py-1">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary">Left</button>
+                <button type="button" class="btn btn-primary">Middle</button>
+                <button type="button" class="btn btn-primary">Right</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <xmp>
+                <div class="col-12 py-1">
+                    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Left</button>
+                        <button type="button" class="btn btn-primary">Middle</button>
+                        <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+                </div>
+                <div class="col-12 py-1">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Left</button>
+                        <button type="button" class="btn btn-primary">Middle</button>
+                        <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+                </div>
+                <div class="col-12 py-1">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Left</button>
+                        <button type="button" class="btn btn-primary">Middle</button>
+                        <button type="button" class="btn btn-primary">Right</button>
+                    </div>
+                </div>
+            </xmp>
+        </div>
+    </div>
+    <div class="">
+        <h3>Nesting</h3>
+        <div class="col-12">
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">Dropdown link</a>
+                        <a class="dropdown-item" href="#">Dropdown link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <xmp>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-primary">1</button>
+                    <button type="button" class="btn btn-primary">2</button>
+
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                    </div>
+                </div>
+            </xmp>
+        </div>
+    </div>
+    <div class="">
+        <h3>Vertical variation</h3>
+        <div class="col-12">
+            <div class="btn-group-vertical theme-warning" role="group" aria-label="Vertical button group">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupVerticalDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1" x-placement="bottom-start">
+                        <a class="dropdown-item" href="#">Dropdown link</a>
+                        <a class="dropdown-item" href="#">Dropdown link</a>
+                    </div>
+                </div>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupVerticalDrop2" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2" x-placement="bottom-start">
+                        <a class="dropdown-item" href="#">Dropdown link</a>
+                        <a class="dropdown-item" href="#">Dropdown link</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary">Button</button>
+                <button type="button" class="btn btn-primary">Button</button>
+                <button type="button" class="btn btn-primary">Button</button>
+                <button type="button" class="btn btn-primary">Button</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <xmp>
+                <div class="btn-group-vertical theme-warning" role="group" aria-label="Vertical button group">
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupVerticalDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1" x-placement="bottom-start">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupVerticalDrop2" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2" x-placement="bottom-start">
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
+                    <button type="button" class="btn btn-primary">Button</button>
+                </div>
+            </xmp>
+        </div>
+    </div>
+    <div class="">
+        <h3>Pill new</h3>
+        <p><code>.primary .btn-group-pill</code></p><div class="col-12">
+        <div class="btn-group primary btn-group-pill radius-5 btn-group-lg" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-primary ">Left</button>
+            <button type="button" class="btn btn-outline-primary">Middle</button>
+            <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+        </div>
+        <div class="col-12">
+            <xmp>
+                <div class="btn-group primary btn-group-pill radius-5 btn-group-lg" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Left</button>
+                    <button type="button" class="btn btn-primary">Middle</button>
+                    <button type="button" class="btn btn-primary">Right</button>
+                </div>
+            </xmp>
+        </div>
+
+        <div class="col-12">
+            <div class="btn-group primary btn-group-pill radius-5" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary active">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <xmp>
+                <div class="btn-group primary btn-group-pill radius-5" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary active">Left</button>
+                    <button type="button" class="btn btn-primary">Middle</button>
+                    <button type="button" class="btn btn-primary">Right</button>
+                </div>
+            </xmp>
+        </div>
+
+        <div class="col-12">
+            <div class="btn-group primary btn-group-pill radius-5 btn-group-sm" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <xmp>
+                <div class="btn-group primary btn-group-pill radius-5 btn-group-sm" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Left</button>
+                    <button type="button" class="btn btn-primary">Middle</button>
+                    <button type="button" class="btn btn-primary">Right</button>
+                </div>
+            </xmp>
+        </div>
+    </div>
+</div>

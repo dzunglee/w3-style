@@ -1,0 +1,26 @@
+$margin: px2rem(5)
+.multi-collapse
+    @extend .box-shadow-collapse
+.card-light
+    margin-top: $margin
+    .card-header
+        background-color: $blue-blur
+        color: $blue
+        .mb-0
+            button
+                &:hover,&:focus
+                    text-decoration: none
+.card-dark
+    margin-top: $margin
+    .card-header-dark
+        background-color: $blue
+        .mb-0
+            button
+                color: $white
+                &:hover,&:focus
+                    text-decoration: none
+.accordion 
+    .card:not(:first-of-type):not(:last-of-type)
+        border-bottom: 1px solid #d2d2d2
+    .card:first-of-type
+        border-bottom: 1px solid #d2d2d2

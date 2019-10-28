@@ -40,7 +40,7 @@ $size: px2rem(16)
 .alert-warning
     @include alertDefault($yellow, $white, $gray,$light: false)
 .alert-info
-    @include alertDefault($dark-green, $white, $secondary,$light: false)
+    @include alertDefault($w3-info, $white, $secondary,$light: false)
 .alert-light
     @include alertDefault($white, $black-75, $blue,$light: false)
 .alert-dark
@@ -58,7 +58,7 @@ $size: px2rem(16)
 .alert-warning-light
     @include alertDefault($yellow-blur, $yellow, $yellow,$light: true)
 .alert-info-light
-    @include alertDefault($dark-green-blur, $dark-green, $dark-green,$light: true)
+    @include alertDefault($dark-green-blur, $w3-info, $w3-info,$light: true)
 .alert-light-light
     @include alertDefault($white, $black-75, $black-75,$light: true)
 .alert-dark-light
@@ -74,7 +74,7 @@ $size: px2rem(16)
 .alert-warning-border
     @include alertBorder($yellow,$radius: true)
 .alert-info-border
-    @include alertBorder($dark-green,$radius: true)
+    @include alertBorder($w3-info,$radius: true)
 .alert-dark-border
     @include alertBorder($gray,$radius: true)
 .alert-success-addition
