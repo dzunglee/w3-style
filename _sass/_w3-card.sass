@@ -5,7 +5,7 @@ $border-card: "primary" $w3-primary, "secondary" $w3-secondary,"success" $w3-suc
     border: 1px solid $color !important
 
 // Assign background color card
-$bg-reset   : "primary" $w3-primary $w3-primary-active, "success" $w3-success $w3-success-active,"info" $w3-info $w3-info-active, "warning" $w3-warning $w3-warning-active, "danger" $w3-danger $w3-danger-active, "secondary" $w3-secondary $w3-secondary-active, "dark" $w3-dark $w3-dark-active, "light" $w3-light $w3-light-active
+$bg-reset   : "primary" $w3-primary $w3-primary-active, "success" $w3-success $w3-success-active,"info" $w3-info $w3-info-active, "warning" $w3-warning $w3-warning-active, "danger" $w3-danger $w3-danger-active, "secondary" $w3-secondary $w3-secondary-active, "dark" $w3-dark $w3-dark-active, "light" $white $w3-light
 @each $name,$bg-color,$bg-color-header in $bg-reset
      .bg-#{$name}
         background-color: $bg-color !important
@@ -30,7 +30,7 @@ $card-boder: "primary" $blue-blur $blue, "secondary" $secondary-blur $w3-seconda
         .card-body
             color: $color !important
         .card-footer
-            background-color: $bg-color
+            background-color: $bg-color !important
             border-top: 1px solid $color !important
             border-top: 1px solid $border-light
 .border-light
