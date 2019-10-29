@@ -5,3 +5,131 @@
 @import "w3-input"
 @import "w3-checkbox"
 @import "w3-button"
+
+.fs-regular-italic
+  font-family: SFUIText-RegularItalic, sans-serif
+
+.w3
+  min-height: 100vh
+
+  header
+    color: $white
+    @extend .transition
+
+    .wrap-header
+      background-color: $blue
+      position: fixed
+      height: px2rem($header-height)
+      width: 100%
+      @extend .transition
+
+    .scroll-hide
+      @extend .transition
+      opacity: 1
+
+    .navbar
+      padding: 0
+      height: px2rem($header-height-fixed)
+
+    &.fixed
+      .logo
+        padding: px2rem(10) px2rem(40)
+        text-align: left
+
+        svg
+          width: auto
+          max-height: calc(#{px2rem($header-height-fixed)} - #{px2rem(20)})
+
+      & + .content
+        padding-top: px2rem($header-height-fixed)
+
+        .main-sidebar
+          min-height: calc(100vh - #{px2rem($header-height-fixed)})
+
+          .menu
+            top: px2rem($header-height-fixed)
+            min-height: calc(100vh - #{px2rem($header-height-fixed)})
+
+      .wrap-header
+        height: px2rem($header-height-fixed)
+
+      .scroll-hide
+        opacity: 0
+        font-size: 0
+
+      .breadcrumb
+        .breadcrumb-item
+          &.active
+            span
+              font-size: px2rem(18)
+              line-height: px2rem(16)
+              color: $white
+
+    .logo
+      @extend .transition
+      flex: 0 px2rem($left-menu-width)
+      max-width: 100%
+      padding: px2rem(20) px2rem(40)
+
+      svg
+        @extend .transition
+        max-height: px2rem(110)
+
+    & + .content
+      @extend .transition
+      padding-top: px2rem($header-height)
+
+  .main-sidebar
+    color: white
+    flex: 0 px2rem($left-menu-width)
+    min-height: calc(100vh - #{px2rem($header-height)})
+
+    .menu
+      background-color: darken($blue, 50)
+      position: fixed
+      @extend .transition
+      top: px2rem($header-height)
+      width: px2rem($left-menu-width)
+      min-height: calc(100vh - #{px2rem($header-height)})
+
+  .content-wrapper
+    flex: 0 px2rem($left-menu-width)
+
+  .breadcrumb
+    margin-bottom: 0
+    border: none
+    background-color: unset
+    color: $white
+    padding: 0
+
+    a, span
+      @extend .transition
+
+    a
+      color: $white
+
+    .breadcrumb-item + .breadcrumb-item::before
+      content: "\e930"
+      font-family: 'icomoon', sans-serif
+      color: darken($white, 20)
+
+    .breadcrumb-item
+      display: flex
+      align-items: center
+
+      a
+        color: darken($white, 20)
+
+      &:first-child
+        padding-left: 0
+
+      &.active
+        span
+          font-size: px2rem(16)
+          color: darken($white, 20)
+
+  .right-menu
+    margin-bottom: 0
+
+    li
+      padding: 0 px2rem(5)
