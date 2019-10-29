@@ -24,3 +24,13 @@ $( document ).ready(function() {
         console.log('rendered')
     });
 });
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+$(document).ready(function(){
+    $('[data-toggle="popoverLight"]').popover({
+        html : true,
+        template : '<div class="popover popover-light" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    });
+});
+
