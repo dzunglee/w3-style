@@ -1,105 +1,131 @@
 // Assign border background color card
-$border-card: "primary" $w3-primary, "secondary" $w3-secondary,"success" $w3-success,"danger" $w3-danger, "warning" $w3-warning, "info" $w3-info, "light" $w3-light, "dark" $w3-dark
+$border-card: "primary" $w3-primary, "secondary" $w3-secondary, "success" $w3-success, "danger" $w3-danger, "warning" $w3-warning, "info" $w3-info, "light" $w3-light, "dark" $w3-dark
 @each $name, $color in $border-card
   .border-#{$name}
     border: 1px solid $color !important
 
 // Assign background color card
-$bg-reset   : "primary" $w3-primary $w3-primary-active, "success" $w3-success $w3-success-active,"info" $w3-info $w3-info-active, "warning" $w3-warning $w3-warning-active, "danger" $w3-danger $w3-danger-active, "secondary" $w3-secondary $w3-secondary-active, "dark" $w3-dark $w3-dark-active, "light" $white $w3-light
-@each $name,$bg-color,$bg-color-header in $bg-reset
-     .bg-#{$name}
-        background-color: $bg-color !important
-        .card-header
-            background-color: $bg-color-header
+$bg-reset: "primary" $w3-primary $w3-primary-active, "success" $w3-success $w3-success-active, "info" $w3-info $w3-info-active, "warning" $w3-warning $w3-warning-active, "danger" $w3-danger $w3-danger-active, "secondary" $w3-secondary $w3-secondary-active, "dark" $w3-dark $w3-dark-active, "light" $white $w3-light
+@each $name, $bg-color, $bg-color-header in $bg-reset
+  .bg-#{$name}
+    background-color: $bg-color !important
+
+    .card-header
+      background-color: $bg-color-header
 
 // Assign background color blur card
-$bg-blur: "primary" $blue-blur $blue,"success" $green-blur $green, "info" $dark-green-blur $w3-info, "warning" $yellow-blur $yellow,"danger" $orange-blur $orange, "secondary" $secondary-blur $secondary, "dark" $gray-blur $gray,"light" $white $black
+$bg-blur: "primary" $blue-blur $blue, "success" $green-blur $green, "info" $dark-green-blur $w3-info, "warning" $yellow-blur $yellow, "danger" $orange-blur $orange, "secondary" $secondary-blur $secondary, "dark" $gray-blur $gray, "light" $white $black
 @each $name, $bg-color, $color in $bg-blur
-    .bg-#{$name}-blur
-        background-color: $bg-color
-        color: $color
+  .bg-#{$name}-blur
+    background-color: $bg-color
+    color: $color
 
 // Assign card border
-$card-boder: "primary" $blue-blur $blue, "secondary" $secondary-blur $w3-secondary,"success" $green-blur $green, "danger" $orange-blur $orange, "warning" $yellow-blur $yellow, "info" $dark-green-blur $w3-info, "dark" $gray-blur $gray, "light" $white $black $gray-blur
-@each $name,$bg-color, $color,$border-light in $card-boder
-    .border-#{$name}
-        .card-header
-            color: $color
-            @if $name == "light"
-              background-color: $white
-              border-bottom: 1px solid $border-light !important
-            @else 
-              background-color: $bg-color
-              border-bottom: 1px solid $color !important
-            
-        .card-body
-            color: $color !important
-        .card-footer
-            background-color: $bg-color !important
-            border-top: 1px solid $color !important
-            border-top: 1px solid $border-light
+$card-boder: "primary" $blue-blur $blue, "secondary" $secondary-blur $w3-secondary, "success" $green-blur $green, "danger" $orange-blur $orange, "warning" $yellow-blur $yellow, "info" $dark-green-blur $w3-info, "dark" $gray-blur $gray, "light" $white $black $gray-blur
+@each $name, $bg-color, $color, $border-light in $card-boder
+  .border-#{$name}
+    .card-header
+      color: $color
+      @if $name == "light"
+        background-color: $white
+        border-bottom: 1px solid $border-light !important
+      @else
+        background-color: $bg-color
+        border-bottom: 1px solid $color !important
+
+    .card-body
+      color: $color !important
+
+    .card-footer
+      background-color: $bg-color !important
+      border-top: 1px solid $color !important
+      border-top: 1px solid $border-light
 
 $radius: px2rem(7)
 .float-none
   float: none
+
 .border-radius
-    border-top-left-radius: $radius
-    border-top-right-radius: $radius
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+
 .text-card-blur
-    color: $gray-blur
+  color: $gray-blur
+
 .text-159
-    color: rgb(159,159 ,159 )
+  color: rgb(159, 159, 159)
+
 .text-42
-    color: rgb(42,42 ,42 ) !important
+  color: rgb(42, 42, 42) !important
+
 .nav-extend
-     li
-            a
-                color: $white
-            .disabled
-                color: rgb(159,194 ,252 )
-            .active
-                color: $blue
+  li
+    a
+      color: $white
+
+    .disabled
+      color: rgb(159, 194, 252)
+
+    .active
+      color: $blue
+
 .card
-    border-radius: $radius
-    img
-        @extend .border-radius
-    .card-body
-        .card-text
-            margin-bottom: px2rem(25)
-        .btn
-            margin-left: px2rem(10)
-            float: right
-            &:hover
-                box-shadow: unset !important
-    .card-header
-        @extend .border-radius
-        border: none
-    .card-footer
-        border-bottom-right-radius: $radius
-        border-bottom-left-radius: $radius
-        background-color: $white
-    .nav-border-bottom
-        margin-bottom: -.15rem
-        li
-            padding: 0rem 1.2rem
-            a
-                padding-right: 0px
-                padding-left: 0px
-                display: inline
-                color: $white
-                &:hover,&:focus
-                    border-bottom: 5px solid $white
-            .disabled
-                color: rgb(159,194 ,252 )
-    .nav-tabs
-        @extend .nav-extend
-    .nav-pills
-        @extend .nav-extend
-        .active
-            background-color: $white
-            border-radius: px2rem(100)
+  border-radius: $radius
+
+  img
+    @extend .border-radius
+
+  .card-body
+    .card-text
+      margin-bottom: px2rem(25)
+
+    .btn
+      margin-left: px2rem(10)
+      float: right
+
+      &:hover
+        box-shadow: unset !important
+
+  .card-header
+    @extend .border-radius
+    border: none
+
+  .card-footer
+    border-bottom-right-radius: $radius
+    border-bottom-left-radius: $radius
+    background-color: $white
+
+  .nav-border-bottom
+    margin-bottom: -.15rem
+
+    li
+      padding: 0rem 1.2rem
+
+      a
+        padding-right: 0px
+        padding-left: 0px
+        display: inline
+        color: $white
+
+        &:hover, &:focus
+          border-bottom: 5px solid $white
+
+      .disabled
+        color: rgb(159, 194, 252)
+
+  .nav-tabs
+    @extend .nav-extend
+
+  .nav-pills
+    @extend .nav-extend
+
+    .active
+      background-color: $white
+      border-radius: px2rem(100)
+
 .card-group
-    .card
-        border: none !important
-    .card-body
-        border: 0.001rem solid $gray-blur !important
+  .card
+    border: none !important
+
+  .card-body
+    border: 0.001rem solid $gray-blur !important
