@@ -24,3 +24,13 @@ $( document ).ready(function() {
         console.log('rendered')
     });
 });
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+$(document).ready(function(){
+    $('[data-toggle="popover1"]').popover({
+        html : true,
+        template : '<div class="popover sidebar" role="tooltip"><div class="arrow"></div><h3 class="popover-header">Popover title</h3><div class="popover-body">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</div></div>'
+    });
+});
+

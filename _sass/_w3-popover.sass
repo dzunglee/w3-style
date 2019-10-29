@@ -1,0 +1,13 @@
+$popovers: "top", "left", "right", "bottom"
+@each $name in $popovers
+     .bs-popover-#{$name}
+        .arrow
+            &::before
+                bottom: 0
+                border-#{$name}-color: $w3-primary
+.popover
+    border: 1px solid $w3-primary
+    .popover-header
+        background-color: $w3-primary
+        color: $white
+
