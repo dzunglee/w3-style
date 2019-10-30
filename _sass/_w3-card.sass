@@ -1,13 +1,13 @@
 // Assign border background color card
 $border-card: "primary" $w3-primary, "secondary" $w3-secondary,"success" $w3-success,"danger" $w3-danger, "warning" $w3-warning, "info" $w3-info, "light" $w3-light, "dark" $w3-dark
 @each $name, $color in $border-card
-  .border-#{$name}
-    border: 1px solid $color !important
+    .border-#{$name}
+        border: 1px solid $color !important
 
 // Assign background color card
 $bg-reset   : "primary" $w3-primary $w3-primary-active, "success" $w3-success $w3-success-active,"info" $w3-info $w3-info-active, "warning" $w3-warning $w3-warning-active, "danger" $w3-danger $w3-danger-active, "secondary" $w3-secondary $w3-secondary-active, "dark" $w3-dark $w3-dark-active, "light" $white $w3-light
 @each $name,$bg-color,$bg-color-header in $bg-reset
-     .bg-#{$name}
+    .bg-#{$name}
         background-color: $bg-color !important
         .card-header
             background-color: $bg-color-header
@@ -26,12 +26,12 @@ $card-boder: "primary" $blue-blur $blue, "secondary" $secondary-blur $w3-seconda
         .card-header
             color: $color
             @if $name == "light"
-              background-color: $white
-              border-bottom: 1px solid $border-light !important
-            @else 
-              background-color: $bg-color
-              border-bottom: 1px solid $color !important
-            
+                background-color: $white
+                border-bottom: 1px solid $border-light !important
+            @else
+                background-color: $bg-color
+                border-bottom: 1px solid $color !important
+
         .card-body
             color: $color !important
         .card-footer
@@ -41,7 +41,7 @@ $card-boder: "primary" $blue-blur $blue, "secondary" $secondary-blur $w3-seconda
 
 $radius: px2rem(7)
 .float-none
-  float: none
+    float: none
 .border-radius
     border-top-left-radius: $radius
     border-top-right-radius: $radius
@@ -52,9 +52,9 @@ $radius: px2rem(7)
 .text-42
     color: rgb(42,42 ,42 ) !important
 .nav-extend
-     li
-            a
-                color: $white
+    li
+        a
+            color: $white
             .disabled
                 color: rgb(159,194 ,252 )
             .active
