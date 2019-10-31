@@ -1,8 +1,9 @@
-@mixin typographyheading($weight,$size,$margin)
-    font-weight: $weight
+@mixin typographyheading($font,$size,$margin)
+    font-family: $font, sans-serif
     font-size: $size
     margin-bottom: $margin
 @mixin typographydisplay($size,$margin)
+    font-family: SFUIText-Regular, sans-serif
     font-size: $size
     margin-bottom: $margin
 @mixin typographyelement($fonts)
@@ -14,17 +15,17 @@
     color: $color
     
 h1
-    @include typographyheading(bold,40pt,8px)
+    @include typographyheading(SFUIText-Bold,40pt,8px)
 h2
-    @include typographyheading(bold,32pt,8px )
+    @include typographyheading(SFUIText-Bold,32pt,8px )
 h3
-    @include typographyheading(600,28pt,8px )
+    @include typographyheading(SFUIText-Semibold,28pt,8px )
 h4
-    @include typographyheading(600 ,24pt,8px )
+    @include typographyheading(SFUIText-Semibold ,24pt,8px )
 h5
-    @include typographyheading(500,20pt,8px)
+    @include typographyheading(SFUIText-Medium,20pt,8px)
 h6
-    @include typographyheading(500,16pt,8px)
+    @include typographyheading(SFUIText-Medium,16pt,8px)
 .display-1
     @include typographydisplay(48pt,16px)
 .display-2
