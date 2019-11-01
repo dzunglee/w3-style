@@ -1,0 +1,28 @@
+$color: "primary" $w3-blur-primary, "secondary" $w3-blur-secondary, "success" $w3-blur-success, "danger" $w3-blur-danger, "warning" $w3-blur-warning, "info" $w3-blur-info, "light" $w3-blur-light, "dark" $w3-blur-dark
+@each $name, $colorname in $color
+    .bg-#{$name}-light
+        background-color: $colorname
+@each $name, $color in $theme-color
+    .text-#{$name}
+        color: $color !important
+.bd-example-border-utils
+    [class^=border]
+        display: inline-block
+        width: 5rem
+        height: 5rem
+        margin: 0.25rem
+        background-color: $white
+.rounded
+    border-radius: px2rem(5) !important
+.rounded-top
+    border-top-left-radius: px2rem(5) !important
+    border-top-right-radius: px2rem(5) !important
+.rounded-right
+    border-top-right-radius: px2rem(5) !important
+    border-bottom-right-radius: px2rem(5) !important
+.rounded-bottom
+    border-bottom-right-radius: px2rem(5) !important
+    border-bottom-left-radius: px2rem(5) !important
+.rounded-left
+    border-top-left-radius: px2rem(5) !important
+    border-bottom-left-radius: px2rem(5) !important
