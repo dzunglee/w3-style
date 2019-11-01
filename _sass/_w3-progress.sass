@@ -1,0 +1,23 @@
+.progress
+    border-radius: px2rem(50)
+    .progress-bar
+        border-radius: px2rem(50)
+.progress-title
+    margin-top: -1rem
+    align-self: flex-end
+    display: flex
+    font-family: SFUIText-Medium, sans-serif
+    position: absolute
+.progress-multiple
+    .progress-bar
+        border-radius: 0px
+        &:first-child
+            border-top-left-radius: 50px
+            border-top-right-radius: 0px
+            border-bottom-left-radius: 50px
+            border-bottom-right-radius: 0px
+        &:last-child
+            border-top-left-radius: 0px
+            border-top-right-radius: 50px
+            border-bottom-left-radius: 0px
+            border-bottom-right-radius: 50px

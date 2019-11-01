@@ -8,6 +8,8 @@ $border-card: "primary" $w3-primary, "secondary" $w3-secondary,"success" $w3-suc
 $bg-reset   : "primary" $w3-primary $w3-primary-active, "success" $w3-success $w3-success-active,"info" $w3-info $w3-info-active, "warning" $w3-warning $w3-warning-active, "danger" $w3-danger $w3-danger-active, "secondary" $w3-secondary $w3-secondary-active, "dark" $w3-dark $w3-dark-active, "light" $white $w3-light
 @each $name,$bg-color,$bg-color-header in $bg-reset
     .bg-#{$name}
+        .progress-title
+            color: $bg-color !important
         background-color: $bg-color !important
         .card-header
             background-color: $bg-color-header
