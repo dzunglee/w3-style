@@ -93,11 +93,20 @@ $radius: px2rem(7)
                 color: rgb(159,194 ,252 )
     .nav-tabs
         @extend .nav-extend
+        .active
+            color: $w3-primary
     .nav-pills
         @extend .nav-extend
         .active
             background-color: $white
             border-radius: px2rem(100)
+            color: $w3-primary
+        li
+            a
+                &:hover
+                    color: $w3-primary
+                    background-color: $white
+                    border-radius: px2rem(100)
 .card-group
     .card
         border: none !important
