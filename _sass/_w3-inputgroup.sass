@@ -1,0 +1,40 @@
+.input-group
+    .input-group-prepend,.input-group-append,.custom-file
+        margin: 0px
+        .input-group-text
+            background-color: $w3-primary
+            border-color: $w3-primary
+            color: $white
+        .custom-file-label
+            &::after
+                background-color: $w3-primary
+                border: 1px solid $w3-primary
+                color: $white
+        .shadow-2
+            &::after
+                box-shadow: 0px 1px 5px 0px $w3-primary
+        .custom-file-label-left
+            &::after
+                left: 0
+                right: unset
+        .custom-button-addons
+            &::after
+                background-color: #e9ecef
+                color: #495057
+                border: inherit
+.custom-input-dropdowns
+    flex-direction: row-reverse
+    .input-group-append
+        .custom-file-label
+            &::after
+                content: unset
+        .custom-file-input
+            width: 73%
+.style-multiple
+    background-color: #e9ecef !important
+    border: 1px solid #ced4da !important
+    color: $w3-primary !important
+.padding-0
+    padding: 0rem 1rem !important
+.shadow-1
+    box-shadow: 0px 1px 5px 0px $w3-primary
