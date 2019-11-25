@@ -1,0 +1,50 @@
+.breadcrumb
+    background-color: unset
+    li
+        a
+            &:hover
+                border-bottom: 1px solid $w3-primary
+    .active
+        color: #bdd4fc
+    .breadcrumb-item
+        +   .breadcrumb-item
+                &::before
+                    color: $w3-primary
+                    content: ">"
+.breadcrumb-bg
+    li
+        a
+            &:hover
+                border-bottom: 1px solid $white
+    .breadcrumb-item
+        +   .breadcrumb-item
+                &::before
+                    color: $white
+                    content: ">"
+.breadcrumb-custom
+    li
+        a
+            color: $gray-blur
+            &:hover
+                border: unset
+                color: $w3-primary
+    .active
+        color: $w3-primary
+    .breadcrumb-item
+        +   .breadcrumb-item
+                &::before
+                    color: $gray-blur
+                    content: ">"
+.breadcrumb-bg-custom
+    li
+        a
+            color: #bdd4fc !important
+            &:hover
+                color: $white !important
+    .active
+        color: $white !important
+    .breadcrumb-item
+        +   .breadcrumb-item
+                &::before
+                    color: #bdd4fc
+                    content: ">"
