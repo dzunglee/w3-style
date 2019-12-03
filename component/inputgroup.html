@@ -539,7 +539,7 @@ permalink: /inputgroup/
     <h5>Shadow buttons - new</h5>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-            <span class="input-group-text shadow-1" id="basic-addon1">@</span>
+            <span class="input-group-text shadow-1 bg-primary border-primary text-white" id="basic-addon1">@</span>
         </div>
         <input type="text" class="form-control" placeholder="Username" aria-label="Username"
             aria-describedby="basic-addon1">
@@ -547,10 +547,10 @@ permalink: /inputgroup/
     <xmp>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text shadow-1" id="basic-addon1">@</span>
+                <span class="input-group-text shadow-1 bg-primary border-primary text-white" id="basic-addon1">@</span>
             </div>
             <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                aria-describedby="basic-addon1">
+                   aria-describedby="basic-addon1">
         </div>
     </xmp>
     <div class="input-group mb-3">
@@ -595,6 +595,52 @@ permalink: /inputgroup/
             </div>
         </div>
     </xmp>
+    <h5>With dark color</h5>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text bg-secondary-active border-secondary text-white" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+               aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <span class="input-group-text bg-secondary-active border-secondary text-white" id="basic-addon2">@example.com</span>
+        </div>
+    </div>
+    <xmp>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-secondary-active border-secondary text-white" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                   aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+                   aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <span class="input-group-text bg-secondary-active border-secondary text-white" id="basic-addon2">@example.com</span>
+            </div>
+        </div>
+    </xmp>
+    <h5>With light color</h5>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text bg-danger-light border-none text-black" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+               aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+               aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <span class="input-group-text bg-secondary-light border-none text-primary" id="basic-addon2">@example.com</span>
+        </div>
+    </div>
     <h1>New style</h1>
     <div class="input-group input-group-style mb-3">
         <div class="input-group-prepend">
@@ -1174,10 +1220,43 @@ permalink: /inputgroup/
     </xmp>
     <h5>Icon buttons</h5>
     <div class="input-group mb-3">
-        <input type="text" class="form-control radius-left-5" aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile04"
+                   aria-describedby="inputGroupFileAddon04">
+            <label class="custom-file-label custom-button-addons radius-left-5 input-dl-icon" for="inputGroupFile04">Choose
+                file</label>
+        </div>
         <div class="input-group-append">
-            <button class="btn btn-segmented btn-icon radius-right-5" type="button"><i class="icon-upload"></i></button>
+            <button class="btn btn-segmented padding-0 radius-right-5 btn-icon" type="button"
+                    id="inputGroupFileAddon04"><i class="icon-upload"></i></button>
         </div>
     </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control radius-left-5 border-right-0 border-primary" aria-label="Recipient's username" placeholder="Search"
+               aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-segmented btn-icon radius-right-5 icon-button border-primary" type="button"><i class="icon-search"></i></button>
+        </div>
+    </div>
+    <xmp>
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04"
+                       aria-describedby="inputGroupFileAddon04">
+                <label class="custom-file-label custom-button-addons radius-left-5 input-dl-icon" for="inputGroupFile04">Choose
+                    file</label>
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-segmented padding-0 radius-right-5 btn-icon" type="button"
+                        id="inputGroupFileAddon04"><i class="icon-upload"></i></button>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control radius-left-5 border-right-0 border-primary" aria-label="Recipient's username" placeholder="Search"
+                   aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-segmented btn-icon radius-right-5 icon-button border-primary" type="button"><i class="icon-search"></i></button>
+            </div>
+        </div>
+    </xmp>
 </div>
