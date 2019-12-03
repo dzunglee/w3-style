@@ -57,8 +57,6 @@ $radius: px2rem(7)
     li
         a
             color: $white
-            .disabled
-                color: rgb(159,194 ,252 )
             .active
                 color: $blue
 .card
@@ -95,9 +93,13 @@ $radius: px2rem(7)
                 color: rgb(159,194 ,252 )
     .nav-tabs
         @extend .nav-extend
+        .disabled
+            color: rgb(159,194 ,252 )
         .active
             color: $w3-primary
     .nav-pills
+        .disabled
+            color: rgb(159,194 ,252 )
         @extend .nav-extend
         .active
             background-color: $white

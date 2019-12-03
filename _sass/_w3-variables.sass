@@ -89,3 +89,6 @@ $theme-color-gradient : ("primary": ($w3-gradient-primary : $w3-primary), "secon
 @each $name, $color in $theme-color
   .#{$name}
     --color: #{$color}
+@each $name, $color in $theme-color-active
+  .bg-#{$name}-active
+    background-color: $color
