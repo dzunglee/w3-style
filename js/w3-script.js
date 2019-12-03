@@ -19,18 +19,34 @@ $( document ).ready(function() {
             $('.sub-logo').removeClass('fixed');
         }
     });
-
-    new Vivus('logo-svg', { duration: 20, file: $('#logo-svg').data('path') }, function () {
-        console.log('rendered')
-    });
+    try {
+        new Vivus('logo-svg', {duration: 20, file: $('#logo-svg').data('path')}, function () {
+            console.log('rendered')
+        });
+    }
+    catch (e) {
+        console.log("!1")
+    }
 });
 $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
+    $('[data-toggle="popover"]').popover();
 });
 $(document).ready(function(){
     $('[data-toggle="popoverLight"]').popover({
         html : true,
         template : '<div class="popover popover-light" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
     });
+});
+$(document).ready(function () {
+    console.log("11");
+})
+$(document).ready(function() {
+    $("#state").select2({
+        tags: true
+    });
+
+    $("#stateMulti").select2({
+        tags: true
+    })
 });
 
