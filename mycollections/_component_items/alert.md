@@ -1,6 +1,6 @@
 ---
 name: Alert
-permalink: /alert
+permalink: /components/alert
 url: alert
 order: 1
 ---
