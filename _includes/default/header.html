@@ -4,14 +4,4 @@
              src="{{ "/images/Logo_Full_Slogan.svg" | prepend:site.baseurl }}">
     </div>
     <h3 class="title text-center">Welcome to W3-Style</h3>
-    <nav class="site-nav">
-      <div class="trigger">
-          {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
-
 </header>

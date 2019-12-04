@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home">
+<div>
     <h4>Pages</h4>
     {% for item in site.page_items %}
         <a class="btn btn-primary mb-1" href="{{ item.url | prepend: site.baseurl }}">{{item.name}}</a>
@@ -11,6 +11,6 @@ layout: default
     <br>
     <h4>Components</h4>
     {% for item in site.component_items %}
-        <a class="btn btn-primary" href="{{ item.url | prepend: site.baseurl }}">{{item.name}}</a>
+        <a class="btn btn-primary mb-1" href="{{ item.url | prepend: site.baseurl }}">{{item.name}}</a>
     {% endfor %}
 </div>
