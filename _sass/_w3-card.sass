@@ -17,9 +17,9 @@ $bg-reset   : "primary" $w3-primary $w3-primary-active, "success" $w3-success $w
 // Assign background color blur card
 $bg-blur: "primary" $blue-blur $blue, "success" $green-blur $green, "info" $dark-green-blur $w3-info, "warning" $yellow-blur $yellow, "danger" $orange-blur $orange, "secondary" $secondary-blur $secondary, "dark" $gray-blur $gray, "light" $white $black
 @each $name, $bg-color, $color in $bg-blur
-  .bg-#{$name}-blur
-      background-color: $bg-color
-      color: $color
+    .bg-#{$name}-blur
+        background-color: $bg-color
+        color: $color
 
 // Assign card border
 $card-boder: "primary" $blue-blur $blue, "secondary" $secondary-blur $w3-secondary,"success" $green-blur $green, "danger" $orange-blur $orange, "warning" $yellow-blur $yellow, "info" $dark-green-blur $w3-info, "dark" $gray-blur $gray, "light" $white $black $gray-blur
