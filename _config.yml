@@ -25,9 +25,10 @@ exclude: ["README.md"]
 collections_dir: mycollections
 
 collections:
-  staff_members:
-    people: true
-    permalink: /:name
+  page_items:
+      sort_by: order
+  component_items:
+      sort_by: order
 
 sass:
   sass_dir: _sass

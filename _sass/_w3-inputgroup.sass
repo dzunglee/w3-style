@@ -1,0 +1,74 @@
+.input-group
+    .input-group-prepend,.input-group-append,.custom-file
+        margin: 0px
+        .input-text-1
+            background-color: $w3-primary
+            border-color: $w3-primary
+            color: $white
+        .radius-5
+            &::after
+                background-color: #f9f9f9 !important
+                color: $black !important
+                border: unset !important
+                border-left: inherit !important
+                border-top-right-radius: px2rem(50)
+                border-bottom-right-radius: px2rem(50)
+        .custom-file-label
+            &::after
+                background-color: $w3-primary
+                border: 1px solid $w3-primary
+                color: $white
+        .shadow-2
+            &::after
+                box-shadow: 0px 1px 5px 0px $w3-primary
+        .custom-file-label-left
+            &::after
+                left: 0
+                right: unset
+        .custom-button-addons
+            &::after
+                background-color: #e9ecef
+                color: #495057
+                border: inherit
+        .browser-1
+            &::after
+                background-color: #f9f9f9 !important
+                color: $black
+                border: 1px solid #ced4da
+                border-top-right-radius: px2rem(50)
+                border-bottom-right-radius: px2rem(50)
+.custom-input-dropdowns
+    flex-direction: row-reverse
+    .custom-file-label
+        &::after
+            content: unset
+    .custom-file-input
+        width: 0%
+.input-group-style
+    .input-group-prepend,.input-group-append,.custom-file
+        .input-group-text
+            background-color: #F9F9F9
+            border: 1px solid #ced4da
+            color: $black
+.radius-left-5
+    border-top-left-radius: px2rem(50) !important
+    border-bottom-left-radius: px2rem(50) !important
+.radius-right-5
+    border-top-right-radius: px2rem(50) !important
+    border-bottom-right-radius: px2rem(50) !important
+.style-multiple
+    background-color: #e9ecef !important
+    border: 1px solid #ced4da !important
+    color: $w3-primary !important
+.padding-0
+    padding: 0rem 1rem !important
+.shadow-1
+    box-shadow: 0px 1px 5px 0px $w3-primary
+.border-right-0
+    border-right: 0px !important
+.input-dl-icon::after
+    content: unset
+.icon-button
+    border-left: 0px !important
+    background-color: unset
+    color: $w3-primary

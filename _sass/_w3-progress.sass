@@ -1,0 +1,32 @@
+$progress: "primary" $w3-primary, "secondary" $w3-secondary, "success" $w3-success, "danger" $w3-danger, "warning" $w3-warning, "info" $w3-info, "light" $w3-light, "dark" $w3-dark
+@each $name, $color in $progress
+    .progress
+        overflow: inherit
+        border-radius: px2rem(50)
+        .bg-#{$name}
+            box-shadow: 0px 2px 5px 0px $color
+    .progress-square-#{$name}
+        background: $color
+.progress-bar
+    border-radius: px2rem(50)
+    box-shadow: 0px 2px 5px 0px #007bff
+.progress-title
+    margin-top: -1rem
+    align-self: flex-end
+    display: flex
+    font-family: SFUIText-Medium, sans-serif
+    position: absolute
+.progress-multiple
+    .progress-bar
+        border-radius: 0px
+        &:first-child
+            border-top-left-radius: 50px
+            border-top-right-radius: 0px
+            border-bottom-left-radius: 50px
+            border-bottom-right-radius: 0px
+        &:last-child
+            border-top-left-radius: 0px
+            border-top-right-radius: 50px
+            border-bottom-left-radius: 0px
+            border-bottom-right-radius: 50px
+     
